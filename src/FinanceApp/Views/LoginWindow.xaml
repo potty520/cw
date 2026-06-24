@@ -1,0 +1,44 @@
+<Window x:Class="FinanceApp.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="财智星财务软件 - 登录"
+        Height="400" Width="450"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        Background="#F8FAFC">
+    <Grid>
+        <Border Background="White" CornerRadius="8" Margin="40"
+                BorderBrush="#E2E8F0" BorderThickness="1">
+            <StackPanel VerticalAlignment="Center" Margin="40">
+                <!-- Logo区域 -->
+                <TextBlock Text="财智星财务软件" FontSize="28" FontWeight="Bold"
+                          Foreground="#2563EB" HorizontalAlignment="Center" Margin="0,0,0,8"/>
+                <TextBlock Text="财务管理系统" FontSize="12"
+                          Foreground="#64748B" HorizontalAlignment="Center" Margin="0,0,0,30"/>
+
+                <!-- 登录表单 -->
+                <TextBlock Text="用户名" FontSize="12" Foreground="#64748B" Margin="0,0,0,4"/>
+                <TextBox x:Name="txtUserCode" Height="40" FontSize="14" Padding="10,8"
+                        BorderBrush="#E2E8F0" BorderThickness="1" Margin="0,0,0,16"/>
+
+                <TextBlock Text="密码" FontSize="12" Foreground="#64748B" Margin="0,0,0,4"/>
+                <PasswordBox x:Name="txtPassword" Height="40" FontSize="14" Padding="10,8"
+                            BorderBrush="#E2E8F0" BorderThickness="1" Margin="0,0,0,20"/>
+
+                <!-- 错误消息 -->
+                <TextBlock x:Name="txtError" Foreground="#EF4444" FontSize="12"
+                          HorizontalAlignment="Center" Margin="0,0,0,16"
+                          Visibility="Collapsed"/>
+
+                <!-- 登录按钮 -->
+                <Button x:Name="btnLogin" Content="登 录" Height="48" MinWidth="200" FontSize="16"
+                       Background="#2563EB" Foreground="White" BorderThickness="0"
+                       Cursor="Hand" Click="BtnLogin_Click" Padding="20,4"/>
+
+                <!-- 版本信息 -->
+                <TextBlock Text="版本 V1.0.0" FontSize="10" Foreground="#94A3B8"
+                          HorizontalAlignment="Center" Margin="0,30,0,0"/>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>

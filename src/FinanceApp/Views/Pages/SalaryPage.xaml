@@ -1,0 +1,106 @@
+<UserControl x:Class="FinanceApp.Views.Pages.SalaryPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             Background="Transparent">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- 工具栏 -->
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="0,0,0,15">
+            <Button Content="工资录入" Style="{StaticResource PrimaryButtonStyle}" Margin="0,0,10,0"/>
+            <Button Content="工资审核" Style="{StaticResource SecondaryButtonStyle}" Margin="0,0,10,0"/>
+            <Button Content="工资发放" Style="{StaticResource SuccessButtonStyle}" Margin="0,0,10,0"/>
+            <Button Content="工资条打印" Style="{StaticResource SecondaryButtonStyle}" Margin="0,0,10,0"/>
+            <Button Content="导出银行报盘" Style="{StaticResource SecondaryButtonStyle}" Margin="0,0,10,0"/>
+            <Button Content="刷新" Style="{StaticResource SecondaryButtonStyle}"/>
+        </StackPanel>
+
+        <!-- 工资列表 -->
+        <Border Grid.Row="1" Style="{StaticResource CardStyle}">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <!-- 查询条件 -->
+                <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="0,0,0,15">
+                    <TextBlock Text="发放月份：" VerticalAlignment="Center" Margin="0,0,10,0"/>
+                    <ComboBox Width="100" SelectedIndex="5">
+                        <ComboBoxItem Content="2026-01"/>
+                        <ComboBoxItem Content="2026-02"/>
+                        <ComboBoxItem Content="2026-03"/>
+                        <ComboBoxItem Content="2026-04"/>
+                        <ComboBoxItem Content="2026-05"/>
+                        <ComboBoxItem Content="2026-06"/>
+                    </ComboBox>
+                    <TextBlock Text="部门：" VerticalAlignment="Center" Margin="20,0,10,0"/>
+                    <ComboBox Width="120" SelectedIndex="0">
+                        <ComboBoxItem Content="全部部门"/>
+                        <ComboBoxItem Content="财务部"/>
+                        <ComboBoxItem Content="销售部"/>
+                        <ComboBoxItem Content="生产部"/>
+                    </ComboBox>
+                    <TextBlock Text="状态：" VerticalAlignment="Center" Margin="20,0,10,0"/>
+                    <ComboBox Width="100" SelectedIndex="0">
+                        <ComboBoxItem Content="全部"/>
+                        <ComboBoxItem Content="未审核"/>
+                        <ComboBoxItem Content="已审核"/>
+                        <ComboBoxItem Content="已发放"/>
+                    </ComboBox>
+                </StackPanel>
+
+                <!-- 工资数据 -->
+                <DataGrid x:Name="dgSalary" Grid.Row="1" AutoGenerateColumns="False"
+                         CanUserAddRows="False" IsReadOnly="True" SelectionMode="Single">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="工号" Binding="{Binding EmployeeCode}" Width="80"/>
+                        <DataGridTextColumn Header="姓名" Binding="{Binding EmployeeName}" Width="80"/>
+                        <DataGridTextColumn Header="部门" Binding="{Binding Department}" Width="100"/>
+                        <DataGridTextColumn Header="基本工资" Binding="{Binding BaseSalary, StringFormat=N2}" Width="100"/>
+                        <DataGridTextColumn Header="岗位工资" Binding="{Binding PositionSalary, StringFormat=N2}" Width="100"/>
+                        <DataGridTextColumn Header="奖金" Binding="{Binding Bonus, StringFormat=N2}" Width="80"/>
+                        <DataGridTextColumn Header="社保扣款" Binding="{Binding SocialDeduction, StringFormat=N2}" Width="100"/>
+                        <DataGridTextColumn Header="公积金扣款" Binding="{Binding HousingDeduction, StringFormat=N2}" Width="100"/>
+                        <DataGridTextColumn Header="个人所得税" Binding="{Binding Tax, StringFormat=N2}" Width="100"/>
+                        <DataGridTextColumn Header="实发工资" Binding="{Binding NetSalary, StringFormat=N2}" Width="100"/>
+                        <DataGridTextColumn Header="状态" Binding="{Binding Status}" Width="80"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+
+                <!-- 汇总信息 -->
+                <Border Grid.Row="2" Background="#F1F5F9" Padding="15">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <StackPanel Grid.Column="0">
+                            <TextBlock Text="职工人数" Foreground="#64748B"/>
+                            <TextBlock Text="25" FontSize="18" FontWeight="Bold"/>
+                        </StackPanel>
+                        <StackPanel Grid.Column="1">
+                            <TextBlock Text="应发工资合计" Foreground="#64748B"/>
+                            <TextBlock Text="¥ 125,000.00" FontSize="18" FontWeight="Bold" Foreground="#2563EB"/>
+                        </StackPanel>
+                        <StackPanel Grid.Column="2">
+                            <TextBlock Text="扣款合计" Foreground="#64748B"/>
+                            <TextBlock Text="¥ 18,500.00" FontSize="18" FontWeight="Bold" Foreground="#F59E0B"/>
+                        </StackPanel>
+                        <StackPanel Grid.Column="3">
+                            <TextBlock Text="实发工资合计" Foreground="#64748B"/>
+                            <TextBlock Text="¥ 106,500.00" FontSize="18" FontWeight="Bold" Foreground="#10B981"/>
+                        </StackPanel>
+                    </Grid>
+                </Border>
+            </Grid>
+        </Border>
+    </Grid>
+</UserControl>

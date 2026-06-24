@@ -1,0 +1,11 @@
+E:\cw\FinanceApp\src\FinanceApp.Models\bin\Debug\net8.0\FinanceApp.Models.deps.json
+E:\cw\FinanceApp\src\FinanceApp.Models\bin\Debug\net8.0\FinanceApp.Models.dll
+E:\cw\FinanceApp\src\FinanceApp.Models\bin\Debug\net8.0\FinanceApp.Models.pdb
+E:\cw\FinanceApp\src\FinanceApp.Models\obj\Debug\net8.0\FinanceApp.Models.GeneratedMSBuildEditorConfig.editorconfig
+E:\cw\FinanceApp\src\FinanceApp.Models\obj\Debug\net8.0\FinanceApp.Models.AssemblyInfoInputs.cache
+E:\cw\FinanceApp\src\FinanceApp.Models\obj\Debug\net8.0\FinanceApp.Models.AssemblyInfo.cs
+E:\cw\FinanceApp\src\FinanceApp.Models\obj\Debug\net8.0\FinanceApp.Models.csproj.CoreCompileInputs.cache
+E:\cw\FinanceApp\src\FinanceApp.Models\obj\Debug\net8.0\FinanceApp.Models.dll
+E:\cw\FinanceApp\src\FinanceApp.Models\obj\Debug\net8.0\refint\FinanceApp.Models.dll
+E:\cw\FinanceApp\src\FinanceApp.Models\obj\Debug\net8.0\FinanceApp.Models.pdb
+E:\cw\FinanceApp\src\FinanceApp.Models\obj\Debug\net8.0\ref\FinanceApp.Models.dll

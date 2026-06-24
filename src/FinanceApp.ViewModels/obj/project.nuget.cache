@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "nD0Dz6VDszc=",
+  "success": true,
+  "projectFilePath": "E:\\cw\\FinanceApp\\src\\FinanceApp.ViewModels\\FinanceApp.ViewModels.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\37848\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.1\\microsoft.extensions.logging.abstractions.7.0.1.nupkg.sha512",
+    "C:\\Users\\37848\\.nuget\\packages\\mysqlconnector\\2.3.1\\mysqlconnector.2.3.1.nupkg.sha512"
+  ],
+  "logs": []
+}

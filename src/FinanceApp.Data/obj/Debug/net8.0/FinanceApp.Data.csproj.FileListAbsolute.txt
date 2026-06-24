@@ -1,0 +1,15 @@
+E:\cw\FinanceApp\src\FinanceApp.Data\bin\Debug\net8.0\FinanceApp.Data.deps.json
+E:\cw\FinanceApp\src\FinanceApp.Data\bin\Debug\net8.0\FinanceApp.Data.dll
+E:\cw\FinanceApp\src\FinanceApp.Data\bin\Debug\net8.0\FinanceApp.Data.pdb
+E:\cw\FinanceApp\src\FinanceApp.Data\bin\Debug\net8.0\FinanceApp.Models.dll
+E:\cw\FinanceApp\src\FinanceApp.Data\bin\Debug\net8.0\FinanceApp.Models.pdb
+E:\cw\FinanceApp\src\FinanceApp.Data\obj\Debug\net8.0\FinanceApp.Data.csproj.AssemblyReference.cache
+E:\cw\FinanceApp\src\FinanceApp.Data\obj\Debug\net8.0\FinanceApp.Data.GeneratedMSBuildEditorConfig.editorconfig
+E:\cw\FinanceApp\src\FinanceApp.Data\obj\Debug\net8.0\FinanceApp.Data.AssemblyInfoInputs.cache
+E:\cw\FinanceApp\src\FinanceApp.Data\obj\Debug\net8.0\FinanceApp.Data.AssemblyInfo.cs
+E:\cw\FinanceApp\src\FinanceApp.Data\obj\Debug\net8.0\FinanceApp.Data.csproj.CoreCompileInputs.cache
+E:\cw\FinanceApp\src\FinanceApp.Data\obj\Debug\net8.0\FinanceA.8D69383E.Up2Date
+E:\cw\FinanceApp\src\FinanceApp.Data\obj\Debug\net8.0\FinanceApp.Data.dll
+E:\cw\FinanceApp\src\FinanceApp.Data\obj\Debug\net8.0\refint\FinanceApp.Data.dll
+E:\cw\FinanceApp\src\FinanceApp.Data\obj\Debug\net8.0\FinanceApp.Data.pdb
+E:\cw\FinanceApp\src\FinanceApp.Data\obj\Debug\net8.0\ref\FinanceApp.Data.dll

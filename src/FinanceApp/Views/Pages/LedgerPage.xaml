@@ -1,0 +1,98 @@
+<UserControl x:Class="FinanceApp.Views.Pages.LedgerPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             Background="Transparent">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- 查询条件 -->
+        <Border Grid.Row="0" Style="{StaticResource CardStyle}" Margin="0,0,0,15">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="会计期间：" VerticalAlignment="Center" Margin="0,0,10,0"/>
+                <ComboBox x:Name="cboYear" Width="80" SelectedIndex="0" Margin="0,0,10,0">
+                    <ComboBoxItem Content="2024"/>
+                    <ComboBoxItem Content="2025"/>
+                    <ComboBoxItem Content="2026"/>
+                </ComboBox>
+                <TextBlock Text="年" VerticalAlignment="Center" Margin="0,0,10,0"/>
+                <ComboBox x:Name="cboMonth" Width="60" SelectedIndex="5" Margin="0,0,20,0">
+                    <ComboBoxItem Content="1"/>
+                    <ComboBoxItem Content="2"/>
+                    <ComboBoxItem Content="3"/>
+                    <ComboBoxItem Content="4"/>
+                    <ComboBoxItem Content="5"/>
+                    <ComboBoxItem Content="6"/>
+                    <ComboBoxItem Content="7"/>
+                    <ComboBoxItem Content="8"/>
+                    <ComboBoxItem Content="9"/>
+                    <ComboBoxItem Content="10"/>
+                    <ComboBoxItem Content="11"/>
+                    <ComboBoxItem Content="12"/>
+                </ComboBox>
+
+                <TextBlock Text="账簿类型：" VerticalAlignment="Center" Margin="0,0,10,0"/>
+                <ComboBox x:Name="cboLedgerType" Width="120" SelectedIndex="0" Margin="0,0,20,0">
+                    <ComboBoxItem Content="总账"/>
+                    <ComboBoxItem Content="明细账"/>
+                    <ComboBoxItem Content="数量金额明细账"/>
+                    <ComboBoxItem Content="多栏账"/>
+                </ComboBox>
+
+                <Button Content="查询" Style="{StaticResource PrimaryButtonStyle}" Margin="0,0,10,0" Click="Query_Click"/>
+                <Button Content="打印" Style="{StaticResource SecondaryButtonStyle}" Margin="0,0,10,0"/>
+                <Button Content="导出" Style="{StaticResource SecondaryButtonStyle}"/>
+            </StackPanel>
+        </Border>
+
+        <!-- 账簿内容 -->
+        <Border Grid.Row="1" Style="{StaticResource CardStyle}">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <!-- 报表头 -->
+                <StackPanel Grid.Row="0" HorizontalAlignment="Center" Margin="0,0,0,20">
+                    <TextBlock Text="总        账" FontSize="18" FontWeight="Bold" HorizontalAlignment="Center"/>
+                    <TextBlock x:Name="txtPeriod" Text="2026年第6期" HorizontalAlignment="Center" Margin="0,5,0,0"/>
+                </StackPanel>
+
+                <!-- 账簿数据 -->
+                <DataGrid x:Name="dgLedger" Grid.Row="1" AutoGenerateColumns="False"
+                         CanUserAddRows="False" IsReadOnly="True" HeadersVisibility="Column">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="科目编码" Binding="{Binding SubjectCode}" Width="100"/>
+                        <DataGridTextColumn Header="科目名称" Binding="{Binding SubjectName}" Width="*"/>
+                        <DataGridTextColumn Header="期初余额" Binding="{Binding InitialBalance, StringFormat=N2}" Width="120"/>
+                        <DataGridTextColumn Header="借方发生额" Binding="{Binding DebitAmount, StringFormat=N2}" Width="120"/>
+                        <DataGridTextColumn Header="贷方发生额" Binding="{Binding CreditAmount, StringFormat=N2}" Width="120"/>
+                        <DataGridTextColumn Header="期末余额" Binding="{Binding EndingBalance, StringFormat=N2}" Width="120"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+
+                <!-- 合计行 -->
+                <Border Grid.Row="2" Background="#F1F5F9" Padding="10">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="200"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="120"/>
+                            <ColumnDefinition Width="120"/>
+                            <ColumnDefinition Width="120"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0" Text="合计" FontWeight="Bold"/>
+                        <TextBlock x:Name="txtTotalInitial" Grid.Column="2" Text="0.00" FontWeight="Bold" TextAlignment="Right"/>
+                        <TextBlock x:Name="txtTotalDebit" Grid.Column="3" Text="0.00" FontWeight="Bold" TextAlignment="Right"/>
+                        <TextBlock x:Name="txtTotalCredit" Grid.Column="4" Text="0.00" FontWeight="Bold" TextAlignment="Right"/>
+                    </Grid>
+                </Border>
+            </Grid>
+        </Border>
+    </Grid>
+</UserControl>
