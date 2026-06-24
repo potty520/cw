@@ -26,14 +26,14 @@
 
 ## 数据库配置
 
-默认连接信息（在 `App.xaml.cs` 中配置）：
-- 主机：`103.236.96.82`
-- 端口：`13306`
-- 数据库：`FinanceDB`
-- 用户：`remote`
-- 密码：`ToCAt69Aidc16I1KvkQo2YWMlUl01U0o`
+数据库连接信息在 `src/FinanceApp/App.xaml.cs` 中配置，请根据实际环境修改 `ConnectionString`。
 
-修改连接字符串后重新编译即可。
+示例格式：
+```
+Server=your_host;Port=your_port;Database=FinanceDB;User=your_user;Password=your_password;CharSet=utf8;
+```
+
+执行 `database/init.sql` 脚本初始化数据库。
 
 ## 项目结构
 
@@ -62,9 +62,9 @@ FinanceApp/
    git clone https://github.com/potty520/cw.git
    ```
 
-2. 执行数据库脚本
+2. 执行数据库脚本（请根据实际数据库连接信息）
    ```bash
-   mysql -h 103.236.96.82 -P 13306 -u remote -p < database/init.sql
+   mysql -h <your_host> -P <your_port> -u <your_user> -p < database/init.sql
    ```
 
 3. 编译运行
